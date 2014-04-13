@@ -1,0 +1,92 @@
+/* NAVIGATION */
+
+nav {
+  border-bottom: 6px solid #d90029;
+  background-color: #2c2e31;
+  height: 81px;
+}
+
+ul.float-right {
+  margin-top: 24px;
+}
+
+.kb-logo {
+  float: left;
+}
+
+.header {
+  font-size: 3.5em;
+  margin-left: 50px;
+  padding: 10px 0;
+  color: white;
+}
+
+.float-right {
+  float: right;
+}
+
+
+.hexagon {
+  width: 50px;
+  height: 27px;
+  background: #262626;
+  position: relative;
+  display: inline-block;
+  margin-right: 25px;
+}
+
+.hexagon:before {
+  content: "";
+  position: absolute;
+  top: -13px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 13px solid #262626;
+}
+.hexagon:after {
+  content: "";
+  position: absolute;
+  bottom: -13px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 13px solid #262626;
+}
+
+i {
+  color: white;
+  font-size: 1.8em;
+  display: block !important;
+  text-align: center;
+}
+
+
+/* PROJECT COLUMNS */
+
+.col-sm-3 {
+  padding: 0;
+}
+
+.project-title {
+  background-color: #d90029;
+  text-align: center;
+  margin: 0;
+  color: white;
+}
+
+#projects-container img {
+  border: 3px solid #2c2e31;
+  margin: auto;
+}
+
+
+
+
+
+
+
