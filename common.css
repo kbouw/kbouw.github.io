@@ -83,6 +83,12 @@ section p a:hover {
   background: #d849cd;
 }
 
+section p a:focus {
+  outline: none;
+  color: white;
+  text-decoration: none;
+}
+
 section p b {
   font-weight: 900;
 }
