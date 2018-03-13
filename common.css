@@ -11,7 +11,7 @@ p, span, h1, h2, h3, h5, h6 {
 }
 
 body {
-  background: -webkit-linear-gradient(top left,#041722,#173f56,#417685);
+  background: -webkit-gradient(linear,left top, right bottom,from(#041722),color-stop(#173f56),to(#417685));
   background: linear-gradient(to bottom right,#041722,#173f56,#417685);
 }
 
@@ -19,7 +19,7 @@ body {
 /* Main Content */
 
 section {
-  max-width: 700px;
+  max-width: 1100px;
   margin: auto;
   padding: 2em;
   height: 100vh;
@@ -49,14 +49,58 @@ section .img {
   opacity: 0.06;
 }
 
-section .content {
-  position: relative;
+section article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-ms-flex-wrap: nowrap;
+	    flex-wrap: nowrap;
 }
 
-section h4 {
-  font-family: 'Better Rattler';
+section article h2 {
   color: white;
-  font-weight: 300 !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 24px;
+}
+
+section article hr {
+  margin-top: 0.25rem;
+  margin-bottom: 0.75rem;
+  border: 0;
+  border-top: 1px solid white;
+  max-width: 200px;
+  margin-left: 0;
+}
+
+section article .kb-content {
+  width: 50%;
+  padding: 0 2em 2em 0;
+}
+
+section article .kb-speaking {
+  width: 50%;
+  padding: 0 0 0 2em;
+}
+
+section article .kb-speaking ul {
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
+section article .kb-speaking ul li h5 {
+  font-size: 17px;
+  line-height: 1.6em;
+  color: white;
+}
+
+section .content {
+  position: relative;
 }
 
 section p, section p a {
@@ -71,7 +115,8 @@ section p:nth-of-type(2) {
 
 section p a {
   border-bottom: 2px solid #d849cd;
-  box-shadow: inset 0 -1px 0 #d849cd;
+  -webkit-box-shadow: inset 0 -1px 0 #d849cd;
+          box-shadow: inset 0 -1px 0 #d849cd;
   -webkit-transition: background .15s cubic-bezier(.33,.66,.66,1);
   transition: background .15s cubic-bezier(.33,.66,.66,1);
   font-weight: 400;
@@ -94,7 +139,7 @@ section p b {
 }
 
 
-section ul {
+section ul.links {
   list-style: none;
   padding: 0;
   text-align: center;
@@ -104,7 +149,7 @@ section ul {
   right: 0;
 }
 
-section ul li {
+section ul.links li {
   font-size: 13px;
   display: inline-block;
   margin: 1em 0.5em;
@@ -112,18 +157,18 @@ section ul li {
   transition: all 0.2s ease;
 }
 
-section ul li a {
+section ul.links li a {
   color: #ddd;
 }
 
-section ul li a:hover {
+section ul.links li a:hover {
   color: white;
   text-decoration: none;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
-section ul span {
+section ul.links span {
   font-size: 0.8em;
   color: #ddd;
 }
@@ -134,4 +179,20 @@ section ul span {
   section p, section p a {
     font-size: 18px;
   }
+}
+
+@media (max-width: 768px){
+  section article {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+  section article .kb-content, section article .kb-speaking {
+    width: 100%;
+  }
+  section article .kb-speaking {
+    padding-left: 0;
+  }
+
 }
