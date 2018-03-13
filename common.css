@@ -22,7 +22,7 @@ section {
   max-width: 1100px;
   margin: auto;
   padding: 2em;
-  height: 100vh;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -193,6 +193,20 @@ section ul.links span {
   }
   section article .kb-speaking {
     padding-left: 0;
+  }
+
+  section article .kb-speaking ul li h5 {
+    font-size: 14px;
+  }
+
+  section ul.links {
+    display: block;
+    position: relative;
+    margin: 2em 0 0;
+  }
+
+  section ul.links li {
+    margin: 0.25em 0.5em;
   }
 
 }
